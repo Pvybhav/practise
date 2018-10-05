@@ -109,8 +109,66 @@ getCourses();
 
 // UPDATING DOCUMENTS
 
+// Update Operators
+// $currentDate
+// $inc
+// $min
+// $max
+// $mul
+// $rename
+// $set
+// $setOnInsert
+// $unset
+
+
 async function updateCourse(id){
+
+    // Approach - 1 --> Query first
+    const course = await Course.findById(id);
+
+    if(!course) return;
+
+    course.isPublished = false;
+    course.author = "another author"
+    // OR
+    course.set({
+        isPublished: false,
+        authour: 'Another Author'
+    });
+
+    const result = await course.save()
+
+
+    // Approach - 2 --> update first
+
+    // first argument is query object
+    const result = await Course.update({_id: id}, { 
+        $set:{
+            author: 'vybhav',
+            isPublished: false
+        }
+    });
+
+    // first argument is id 
+    const courseObject = await Course.findByIdAndUpdate(id, {
+        $set: {
+            author: 'vybhav',
+            isPublished: false
+        }
+    }, {new: true}); // without '{new: true}', it will return the original object befor updating
+
+    console.log(result);
 
 }
 
-updateCourse();
+updateCourse("id");
+
+
+// delteOne --> finds the first one and deletes it 
+
+async function removeCourse(id) { 
+    // const result = await Course.deleteOne({_id: id});
+    const course = await Course.findByIdAndRemove(id); // returns course document and deletes it
+    console.log(result);
+ }
+removeCourse(id);
