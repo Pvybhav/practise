@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-import {
+const {
     Customer,
     validate
-} from '../models/customer';
+} = require('../models/customer');
 
 // getting customers from database
 router.get('/', async (req, res) => {

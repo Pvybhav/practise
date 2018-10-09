@@ -1,0 +1,49 @@
+Arguments: 
+  E:\Program Files (x86)\nodejs\node.exe C:\Users\vy323647\.npm-global\node_modules\yarn\bin\yarn.js add bcrypt --verbose
+
+PATH: 
+  C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MongoDB 2.6 Standard\bin;C:\Program Files\Java\jdk1.8.0_121\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\MySQL\MySQL Utilities 1.6;C:\Program Files\MySQL\MySQL Shell 1.0\bin;C:\Python27\Scripts;C:\Program Files\PuTTYY\;C:\Python27;C:\Users\vy323647\AppData\Roaming\npm;C:\Users\vy323647\.npm-global;E:\Program Files (x86)\Anaconda;E:\Program Files (x86)\Anaconda\Scripts;E:\Program Files (x86)\Anaconda\Library\bin;C:\Program Files (x86)\Gradle\bin;F:\Software\apache-maven-3.5.3-bin\apache-maven-3.5.3\bin;F:\Software\apache-maven-3.5.3-bin\apache-maven-3.5.3;E:\Program Files (x86)\Git\cmd;E:\Program Files (x86)\WinMerge;E:\Program Files (x86)\Microsoft VS Code\bin;E:\Program Files (x86);E:\Program Files (x86)\nodejs\;E:\Program Files (x86)\mongodb\bin\;C:\Program Files\nodejs\;C:\Users\vy323647\AppData\Local\Microsoft\WindowsApps
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  8.12.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: read ECONNRESET
+      at TLSWrap.onread (net.js:622:25)
+
+npm manifest: 
+  {
+    "name": "Exercise",
+    "version": "1.0.0",
+    "description": "",
+    "main": "Exercise.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "body-parser": "^1.18.3",
+      "express": "^4.16.3",
+      "fawn": "^2.1.5",
+      "joi": "^13.7.0",
+      "joi-objectid": "^2.0.0",
+      "joi-password-complexity": "^2.0.1",
+      "loadash": "^1.0.0",
+      "mongoose": "^5.3.2",
+      "node-pre-gyp": "^0.11.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
