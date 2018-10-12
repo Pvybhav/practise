@@ -7,6 +7,13 @@ const {
     User,
     validate
 } = require('../models/user');
+const auth = require('../middleware/auth');
+
+// 'me' instead of ':id' because the user can access other's details also
+router.get('/me', auth, async (req, res)=>{
+    const user = await User.findById(req.user._id).select('-password');
+    res.send(user);
+})
 
 router.post('/', async (req, res) => {
     const {
