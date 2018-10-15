@@ -1,0 +1,31 @@
+1. Create Store
+2. Need atleast one reducer(--> updates the Store) for creating Store
+3. The responsive messages --> actions
+4. Reducer is dependent on action
+5. 'actions' folder in 'src'
+6. create 'index.js' inside 'actions' folder
+7. action type is capitialized
+
+const action = {
+    type: 'SET_STACK',
+    stack: stack
+};
+
+
+8. wrap the above code in function(stack data comes from function parameter) and return the action
+9. create 'reducers' folder
+10. create 'index.js' inside 'reducers' folder
+11. reducer is a function, which contains two parameters i.e., one is state and another one is action
+12. switch statement to execute the different actions by its type
+13. the reducer function returns the empty object by default which is given as a parameter for state
+
+function stack(state={}, action){
+    switch(action.type){
+        case 'SET_STACK': 
+            return action.stack;
+        default:
+            return state;
+    }
+}
+14. create action type as variable and use that variable inside actions and export it to use for other
+15. import createStore and rootReducer(reducer folder) in 'index.js' file
