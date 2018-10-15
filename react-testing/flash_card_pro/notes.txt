@@ -28,4 +28,17 @@ function stack(state={}, action){
     }
 }
 14. create action type as variable and use that variable inside actions and export it to use for other
-15. import createStore and rootReducer(reducer folder) in 'index.js' file
+15. import createStore and rootReducer(reducer folder) in root 'index.js' file
+16. subscribe() fired up when the store updates
+17. dispatch() is used to fire up an action
+18. import { Provider } from 'react-redux' and wrap BrowserRouter in <Provider> component
+19. set store as prop for Provider component
+20. import setStack action in stacklist and {connect} from 'react-redux'
+21. connect takes two parameters and both are functions
+22. first function in connect connects the store and get some data and second one handles allowing our component to use action creators
+23. connect function itself returns function
+24. The second function for the props is mapDispatchToProps and 'dispatch' will pass as an argument to this function
+25. import {bindActionCreators} from 'redux'
+26. bindActionCreators takes two parameters. first parameter is Action function and second one is dispatch and return it
+27. the action function is available through props in the component
+28. Instead of using bindActionCreators we can directly pass the action to the second parameter of the connect
