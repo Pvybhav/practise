@@ -11,7 +11,7 @@ import rootReducer from './reducers';
 import {Provider} from 'react-redux';
 
 const store = createStore(rootReducer);
-store.subscribe(() => console.log('store', store.getState()));
+// store.subscribe(() => console.log('store', store.getState()));
 // store.dispatch(setStack({id: 0, title: 'title', cards: []})); // dispatching action manually
 
 ReactDOM.render(
