@@ -5,6 +5,7 @@ import App from '../src/components/App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Stack from './components/Stack';
+import StackForm from './components/StackForm';
 
 import {createStore} from 'redux';
 import rootReducer from './reducers';
@@ -19,7 +20,8 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route exact path='/' component={App}/>
-      <Route path='/stack' component={Stack}/>
+      <Route path='/stack' component={Stack} />
+      <Route path='/stack_form' component={StackForm}/>
     </Switch>
   </BrowserRouter>
 </Provider>, document.getElementById('root'));
